@@ -1,0 +1,463 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp_pc.lakbayclient.HomeFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_bottom"
+            android:elevation="1dp">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+
+                tools:context="com.example.hp_pc.lakbayclient.MapsActivity" />
+
+        </RelativeLayout>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_margin="20dp"
+                android:id="@+id/search"
+                >
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/search"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:scaleType="fitCenter"
+            android:background="@drawable/white_circle"
+            android:elevation="10dp"
+            android:id="@+id/ic_gps"
+            android:src="@drawable/ic_gps"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/white_box"
+            android:elevation="10dp">
+
+            <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+
+            <RelativeLayout
+                android:id="@+id/switch2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/white_box"
+                android:elevation="10dp"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/aa"
+                    android:layout_above="@+id/bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/white_box"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:elevation="10dp"
+                        android:orientation="vertical"
+
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/userImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/default_user"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/userImage"
+                            android:paddingTop="5dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+
+                            android:hint="Name"/>
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/userImage"
+                            android:layout_below="@+id/tvName"
+                            android:paddingTop="5dp"
+                            android:textSize="14dp"
+                            android:hint="Phone Number"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/userImage"
+                            android:theme="@style/RatingBar"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_below="@+id/tvPhone"
+                            android:numStars="5"
+                            android:stepSize="0.1"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/userImage"
+                            android:layout_below="@+id/ratingBar"
+                            android:paddingTop="5dp"
+                            android:textSize="14dp"
+                            android:hint="Car"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/toPaypal"
+                            android:text="PAYPAL" />
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerVertical="true">-->
+
+                            <!--&lt;!&ndash;<ProgressBar&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:id="@+id/pBar"&ndash;&gt;-->
+                                <!--&lt;!&ndash;style="?android:attr/progressBarStyle"&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                                <!--&lt;!&ndash;android:visibility="gone"/>&ndash;&gt;-->
+
+                        <!--</RelativeLayout>-->
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/cc"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="5dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/driverStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="13dp"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/register_button"
+                        android:elevation="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:text="CANCEL LAKBAY"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+            <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+            <RelativeLayout
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="1dp">
+
+                <RelativeLayout
+                    android:id="@+id/a"
+                    android:layout_above="@+id/b"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/l1"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/single"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:elevation="10dp"
+                            android:background="@drawable/single"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/lakbay_single" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:gravity="center"
+                            android:text="Lakbay Single" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/l2"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+
+                        <ImageButton
+                            android:id="@+id/family"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="4dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/single"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/lakbay_family" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:text="Lakbay Family"
+                            android:id="@+id/textView5" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/l3"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        >
+
+                        <ImageButton
+                            android:id="@+id/barkada"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="4dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:elevation="10dp"
+                            android:background="@drawable/single"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/lakbay_barkada" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:text="Lakbay Barkada"
+                            android:id="@+id/textView" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/b"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/c"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/ic_payment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_action_name" />
+
+                    <TextView
+                        android:id="@+id/cash"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/ic_payment_method"
+                        android:text="Cash"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:layout_alignBaseline="@+id/cash"
+                        android:layout_toEndOf="@+id/cash"
+                        android:hint=""
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/capacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/ic_user"
+                        android:paddingEnd="10dp"
+                        android:text="1-4"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+
+                    <Button
+                        android:id="@+id/request"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/black_border"
+                        android:elevation="20dp"
+                        android:text="CONFIRM LAKBAY"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
