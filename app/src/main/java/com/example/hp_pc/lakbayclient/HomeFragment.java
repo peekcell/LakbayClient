@@ -32,6 +32,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.braintreepayments.api.BraintreeFragment;
+import com.braintreepayments.api.PayPal;
+import com.braintreepayments.api.exceptions.InvalidArgumentException;
+import com.braintreepayments.api.interfaces.PaymentMethodNonceCreatedListener;
+import com.braintreepayments.api.models.PayPalAccountNonce;
+import com.braintreepayments.api.models.PayPalRequest;
+import com.braintreepayments.api.models.PaymentMethodNonce;
+import com.braintreepayments.api.models.PostalAddress;
 import com.bumptech.glide.Glide;
 import com.directions.route.AbstractRouting;
 import com.directions.route.Route;
@@ -68,16 +76,27 @@ import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.TextHttpResponseHandler;
 
+import org.apache.commons.io.IOUtils;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import cz.msebera.android.httpclient.Header;
 
 
 /**
@@ -120,24 +139,32 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
     private Marker pickupMarker, destinationMarker;
     public DatabaseReference userdata;
     private float rideDistance, ridePrice;
+    private double customerRidePrice;
+
+    BraintreeFragment mBraintreeFragment;
+    String mAuthorization;
+    HashMap<String, String> paramsHash;
 
 
     Button ncancel;
-    Button nrequest, toPaypal;
+    Button nrequest, toPaypal, btnpboxPaynow, btnpbozReturn;
     ImageView single, family, barkada, ic_payment_method;
     String requestType = "single";
     String total, pmethod;
     TextView cap, cash, price, driverStatus;
-    RelativeLayout requestLayout, cancelLayout;
+    RelativeLayout requestLayout, cancelLayout, paymentBoxLayout;
+    String pboxPricex;
+    String pboxdriverID;
 
     private RatingBar mRatingBar;
 
     private String destination;
 
-    private String firstName, lastName;
-    private TextView name, phone, car;
-    private ImageView userImage;
+    private String userUID;
 
+    private String firstName, lastName;
+    TextView name, phone, car, tvCar, tvpboxPrice, tvpboxCartype, tvpboxSuccessID, tvpboxPtype, tvpboxDrname, tvpboxifcash, tvPaythrough;
+    ImageView userImage;
 
 
     int flag = 0;
@@ -170,7 +197,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 
         ncancel = v.findViewById(R.id.cancel);
         nrequest = v.findViewById(R.id.request);
-        toPaypal = v.findViewById(R.id.toPaypal);
+        btnpboxPaynow = v.findViewById(R.id.btnpboxPaynow);
+        btnpbozReturn = v.findViewById(R.id.btnpboxReturn);
 
         driverStatus = v.findViewById(R.id.driverStatus);
         cap = v.findViewById(R.id.capacity);
@@ -182,6 +210,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
         single = v.findViewById(R.id.single);
         family = v.findViewById(R.id.family);
         barkada = v.findViewById(R.id.barkada);
+        tvCar = v.findViewById(R.id.tvCar);
         single.setSelected(true);
 
         name = v.findViewById(R.id.tvName);
@@ -190,9 +219,19 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
         userImage = v.findViewById(R.id.userImage);
         mRatingBar = v.findViewById(R.id.ratingBar);
         destinationLatLng = new LatLng(0.0, 0.0);
+        tvpboxPrice = v.findViewById(R.id.tvpboxPrice);
+        tvpboxCartype = v.findViewById(R.id.tvpboxCartype);
+        tvpboxifcash = v.findViewById(R.id.tvpboxifcash);
+        tvpboxPtype = v.findViewById(R.id.tvpboxPtype);
+        tvpboxDrname = v.findViewById(R.id.tvpboxDrname);
+        tvPaythrough = v.findViewById(R.id.tvPaythrough);
 
         requestLayout = v.findViewById(R.id.switch1);
         cancelLayout = v.findViewById(R.id.switch2);
+        paymentBoxLayout = v.findViewById(R.id.PaymentBox);
+
+        tvpboxifcash.setVisibility(View.GONE);
+
 
         Bitmap abitmap = ((BitmapDrawable)getResources().getDrawable(R.drawable.singlee)).getBitmap();
         Bitmap aimagerounded = Bitmap.createBitmap(abitmap.getWidth(), abitmap.getHeight(), abitmap.getConfig());
@@ -220,6 +259,12 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
         cpaint.setShader(new BitmapShader(cbitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
         ccanvas.drawRoundRect(new RectF(0,0,cbitmap.getWidth(), cbitmap.getHeight()), 1000, 1000, cpaint);
         barkada.setImageBitmap(cimagerounded);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null) {
+            userUID = user.getUid();
+        }
+
         //        single.setSelected(true);
 
         single.setOnClickListener(new View.OnClickListener() {
@@ -244,6 +289,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 
                         ridePrice = 0;
                         total = String.valueOf(0);
+                        cap.setText("1-4");
+                        requestType = "single";
                         price.setText("----------------");
                     } else {
 
@@ -255,8 +302,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 //                        total = String.format("%.2f", ridePrice);
 //                        price.setText(String.valueOf(total));
 //
-//                        cap.setText("1-4");
-//                        requestType = "single";
+                        cap.setText("1-4");
+                        requestType = "single";
 
                         computeFare("singleRide");
 
@@ -297,7 +344,11 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                         ridePrice = 0;
                         total = String.valueOf(0);
                         price.setText("----------------");
+                        cap.setText("1-6");
+                        requestType = "family";
                     } else {
+                        cap.setText("1-6");
+                        requestType = "family";
                         computeFare("familyRide");
                     }
 
@@ -341,7 +392,11 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                         ridePrice = 0;
                         total = String.valueOf(0);
                         price.setText("----------------");
+                        cap.setText("1-12");
+                        requestType = "family";
                     } else {
+                        cap.setText("1-12");
+                        requestType = "family";
                         computeFare("barkadaRide");
                     }
 
@@ -388,6 +443,21 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                     } else if(flag == 1) {
                         Toast.makeText(getContext(), "cash payment selected", Toast.LENGTH_SHORT).show();
 
+                        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                        DatabaseReference userdata = FirebaseDatabase.getInstance().getReference("clients_request");
+                        GeoFire geoFire = new GeoFire(userdata);
+                        geoFire.setLocation(userId, new GeoLocation(LastLocation.getLatitude(), LastLocation.getLongitude()));
+
+                        pickupLocation = new LatLng(LastLocation.getLatitude(), LastLocation.getLongitude());
+                        pickupMarker = nmap.addMarker(new MarkerOptions()
+                                .position(pickupLocation)
+                                .title("Pickup Here")
+                                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
+
+                        driverStatus.setText("Getting your Driver...");
+
+                        getClosestDriver();
+
                     } else if(flag == 2) {
                         Toast.makeText(getContext(), "paypal payment selected", Toast.LENGTH_SHORT).show();
                     }
@@ -423,6 +493,9 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                     public void run() {
                         requestLayout.setVisibility(View.VISIBLE);
                         cancelLayout.setVisibility(View.GONE);
+
+
+
                     }
                 });
 
@@ -465,6 +538,39 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             }
         });
 
+        tvPaythrough.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] pmethods  = {"Cash", "Paypal"};
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Pick payment method")
+                        .setItems(pmethods, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                if(i == 0) {
+                                    Toast.makeText(getContext(), "Cash", Toast.LENGTH_SHORT).show();
+                                    cash.setText("Cash");
+                                    pmethod = "Cash";
+                                    tvPaythrough.setText("Pay as Cash");
+                                    flag = 1;
+                                    ic_payment_method.setImageResource(R.drawable.ic_action_name);
+                                } else if(i == 1) {
+                                    Toast.makeText(getContext(), "Paypal", Toast.LENGTH_SHORT).show();
+                                    cash.setText("Paypal");
+                                    pmethod = "Paypal";
+                                    tvPaythrough.setText("Pay as Paypal");
+                                    flag = 2;
+                                    ic_payment_method.setImageResource(R.drawable.paypal_logo);
+                                }
+                            }
+                        });
+                builder.create();
+                builder.show();
+            }
+        });
+
 
         ngps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -473,16 +579,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                 getDeviceLocation();
             }
         });
-
-        toPaypal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), PaypalActivity.class);
-                intent.putExtra("totalPrice", String.valueOf(total));
-                startActivity(intent);
-            }
-        });
-
 
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
@@ -712,6 +808,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 //                                    Toast.makeText(getContext(), "cartype db" + carrrr , Toast.LENGTH_SHORT).show();
                                     driverFound = true;
                                     driverFoundID = dataSnapshot.getKey();
+                                    pboxdriverID = dataSnapshot.getKey();
 
                                     DatabaseReference driverRef = FirebaseDatabase.getInstance().getReference().child("drivers").child(driverFoundID).child("client_request");
                                     String customerID = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -847,11 +944,21 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 //
                 } else {
                     endRide();
+//                    payTheRide();
+//                    Intent intent = new Intent(getContext(), PaypalExpressCheckout.class);
+//                    intent.putExtra("driverID", pboxdriverID);
+//                    startActivity(intent);
+
+                    payTheRide();
+
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            requestLayout.setVisibility(View.VISIBLE);
+                            requestLayout.setVisibility(View.GONE);
                             cancelLayout.setVisibility(View.GONE);
+                            paymentBoxLayout.setVisibility(View.VISIBLE);
+//                            lpbox.setVisibility(View.VISIBLE);
+
                         }
                     });
                 }
@@ -859,6 +966,157 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+    }
+
+    private void payTheRide() {
+        if(pmethod.equalsIgnoreCase("Cash")) {
+            btnpboxPaynow.setVisibility(View.GONE);
+            tvpboxifcash.setVisibility(View.VISIBLE);
+            tvpboxifcash.setText("Cash payment. Waiting for driver confirmation.");
+            tvpboxPtype.setText(pmethod);
+        } else if(pmethod.equalsIgnoreCase("Paypal")) {
+            btnpboxPaynow.setVisibility(View.VISIBLE);
+            tvpboxifcash.setVisibility(View.VISIBLE);
+            tvpboxifcash.setText("Paypal payment. Proceed to paypal UI.");
+            tvpboxPtype.setText(pmethod);
+        }
+        getToken();
+        DatabaseReference getPendingData = FirebaseDatabase.getInstance().getReference().child("pending").child(pboxdriverID).child("price_to_pay");
+
+        getPendingData.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()) {
+                    String c_ride_price = dataSnapshot.child("c_ride_price").getValue().toString();
+
+                    tvpboxPrice.setText(c_ride_price);
+                    tvpboxCartype.setText("wait");
+                    pboxPricex = c_ride_price;
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        btnpboxPaynow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_SHORT).show();
+                setupBraintreeAndStartExpressCheckout();
+            }
+        });
+
+    }
+
+    private void getToken() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get("http://10.0.2.2/braintree-php-3.33.0/client_token.php", new TextHttpResponseHandler() {
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                Toast.makeText(getActivity(), "Failure " + statusCode, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String clientToken) {
+                mAuthorization = clientToken;
+
+                try {
+
+                    mBraintreeFragment = BraintreeFragment.newInstance(getActivity(), mAuthorization);
+                    Toast.makeText(getContext(), "BraintreeFragment is ready to use", Toast.LENGTH_SHORT).show();
+                    // mBraintreeFragment is ready to use!
+                } catch (InvalidArgumentException e) {
+                    // There was an issue with your authorization string.
+                }
+            }
+        });
+    }
+
+    public void setupBraintreeAndStartExpressCheckout() {
+        PayPalRequest request = new PayPalRequest("120")
+                .currencyCode("PHP")
+                .intent(PayPalRequest.INTENT_AUTHORIZE);
+        PayPal.requestOneTimePayment(mBraintreeFragment, request);
+
+        mBraintreeFragment.addListener(new PaymentMethodNonceCreatedListener() {
+            @Override
+            public void onPaymentMethodNonceCreated(PaymentMethodNonce paymentMethodNonce) {
+                String nonce = paymentMethodNonce.getNonce();
+
+                if(paymentMethodNonce instanceof PayPalAccountNonce) {
+                    PayPalAccountNonce payPalAccountNonce = (PayPalAccountNonce)paymentMethodNonce;
+
+                    // Access additional information
+                    String email = payPalAccountNonce.getEmail();
+                    String firstName = payPalAccountNonce.getFirstName();
+                    String lastName = payPalAccountNonce.getLastName();
+                    String phone = payPalAccountNonce.getPhone();
+
+                    // See PostalAddress.java for details
+                    PostalAddress billingAddress = payPalAccountNonce.getBillingAddress();
+                    PostalAddress shippingAddress = payPalAccountNonce.getShippingAddress();
+                }
+
+                postNonceToServer(nonce);
+            }
+        });
+    }
+
+    public void postNonceToServer(final String nonce) {
+        final RequestParams params = new RequestParams();
+
+        paramsHash = new HashMap<>();
+        paramsHash.put("amount", pboxPricex);
+        paramsHash.put("nonce", nonce);
+        RequestParams requestParams = new RequestParams(paramsHash);
+
+        AsyncHttpClient client2 = new AsyncHttpClient();
+        client2.post("http://10.0.2.2/braintree-php-3.33.0/checkout.php", requestParams, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                Toast.makeText(getActivity(), "Success Post", Toast.LENGTH_SHORT).show();
+
+                btnpboxPaynow.setVisibility(View.GONE);
+                btnpbozReturn.setVisibility(View.VISIBLE);
+
+                try {
+                    String str = IOUtils.toString(responseBody, "UTF-8");
+
+                    tvpboxifcash.setText("Success. ID: " + str);
+
+                    DatabaseReference updatePayment = FirebaseDatabase.getInstance().getReference().child("payments").child(userUID);
+
+                    String requestID = updatePayment.push().getKey();
+                    updatePayment.child(requestID).setValue(true);
+
+                    HashMap map = new HashMap();
+                    map.put("price_payed", pboxPricex);
+                    map.put("payment_method", "Paypal Express Checkout");
+                    map.put("push_date", ServerValue.TIMESTAMP);
+
+                    updatePayment.child(requestID).updateChildren(map);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+
+        btnpbozReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestLayout.setVisibility(View.VISIBLE);
+                paymentBoxLayout.setVisibility(View.GONE);
             }
         });
     }
@@ -929,6 +1187,15 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
     private DatabaseReference driverLocationRef;
     private ValueEventListener driverLocationRefListener;
     private void getDriverLocation(){
+        DatabaseReference ridePrice = FirebaseDatabase.getInstance().getReference().child("pending").child(driverFoundID).child("price_to_pay");
+        String customerID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        HashMap map = new HashMap();
+        map.put("c_ride_id", customerID);
+        map.put("c_ride_price", customerRidePrice);
+        map.put("c_payment_status", "unpaid");
+        ridePrice.updateChildren(map);
+
+        tvCar.setText(String.valueOf(customerRidePrice));
         driverLocationRef = FirebaseDatabase.getInstance().getReference().child("drivers_working").child(driverFoundID).child("l");
         driverLocationRefListener = driverLocationRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -1012,6 +1279,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             ridePrice = ((rideDistance * perKm) + basePrice);
             float r = Math.round(ridePrice)+2*3;
             total = String.format("%.2f", r);
+            customerRidePrice = Double.parseDouble(total);
             price.setText(String.valueOf(total));
 
             cap.setText("1-4");
@@ -1033,6 +1301,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             ridePrice = ((rideDistance*perKm)+basePrice);
             float r = Math.round(ridePrice)+2*3;
             total = String.format("%.2f", r);
+            customerRidePrice = Double.parseDouble(total);
             price.setText(String.valueOf(total));
 
             cap.setText("1-12");
@@ -1053,6 +1322,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             ridePrice = ((rideDistance*perKm)+basePrice);
             float r = Math.round(ridePrice)+2*3;
             total = String.format("%.2f", r);
+            customerRidePrice = Double.parseDouble(total);
             price.setText(String.valueOf(total));
 
             cap.setText("1-6");

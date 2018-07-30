@@ -34,6 +34,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PaypalExpressCheckout">
+
+        </activity>
+        <activity android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="com.example.hppc.lakbayclient.braintree" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RegistrationActivity" />
         <activity
             android:name=".DashboardActivity"
@@ -58,9 +70,6 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".PaypalActivity"
-            android:label="PaypalActivity" />
         <activity
             android:name=".PaymentDetails"
             android:label="PaymentDetails" />
@@ -106,8 +115,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.hp_pc.lakbayclient.DashboardActivity" />
         </activity>
-
-        <activity android:name=".HistorySingleActivity"
+        <activity
+            android:name=".HistorySingleActivity"
             android:label="@string/title_activity_history_single"
             android:theme="@style/AppTheme">
 

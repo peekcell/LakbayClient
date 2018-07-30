@@ -70,6 +70,25 @@ public class MainActivity extends AppCompatActivity {
 //                    }
 //                }, 2000);
                 if(user!=null){
+                    try{
+                        if(user.isEmailVerified()){
+                            progressDialog.setMessage("Signing In Your Account");
+                            progressDialog.show();
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    progressDialog.dismiss();
+                                    Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            }, 3000);
+
+                        }
+                    }catch (NullPointerException e){
+                        Toast.makeText(MainActivity.this, "NullPointerException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
 //                    try{
 //                        if(user.isEmailVerified()){
 //                            progressDialog.setMessage("Signing In Your Account");
@@ -174,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
                                                         progressDialog.dismiss();
                                                         Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
                                                         startActivity(intent);
+                                                        finish();
                                                     }
                                                 }, 3000);
 

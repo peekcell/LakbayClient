@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e10a994-ad0e-46f0-8309-725ed64c2a4b" name="Default" comment="" />
+    <list default="true" id="6b9f2f4a-a445-442b-89cd-a17409a8eead" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_paypal_sdk_paypal_android_sdk_2_15_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_6_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_11_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_card_android_sdk_5_5_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,49 +34,133 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PaymentDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="972" column="17" lean-forward="false" selection-start-line="972" selection-start-column="17" selection-end-line="972" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10825#12926#0" expanded="true" />
+                <element signature="e#12925#12926#0" expanded="true" />
+                <element signature="e#12964#14933#0" expanded="true" />
+                <element signature="e#14932#14933#0" expanded="true" />
+                <element signature="e#14972#16947#0" expanded="true" />
+                <element signature="e#16946#16947#0" expanded="true" />
+                <element signature="e#16988#19716#0" expanded="true" />
+                <element signature="e#19715#19716#0" expanded="true" />
+                <element signature="e#19755#20264#0" expanded="true" />
+                <element signature="e#19896#20155#0" expanded="true" />
+                <element signature="e#20154#20155#0" expanded="true" />
+                <element signature="e#20263#20264#0" expanded="true" />
+                <element signature="e#20300#21807#0" expanded="true" />
+                <element signature="e#20641#21715#0" expanded="true" />
+                <element signature="e#21714#21715#0" expanded="true" />
+                <element signature="e#21806#21807#0" expanded="true" />
+                <element signature="e#21851#23505#0" expanded="true" />
+                <element signature="e#22191#23413#0" expanded="true" />
+                <element signature="e#23412#23413#0" expanded="true" />
+                <element signature="e#23504#23505#0" expanded="true" />
+                <element signature="e#23542#23752#0" expanded="true" />
+                <element signature="e#23751#23752#0" expanded="true" />
+                <element signature="e#30582#31460#0" expanded="true" />
+                <element signature="e#31459#31460#0" expanded="true" />
+                <element signature="e#36257#36465#0" expanded="true" />
+                <element signature="e#36464#36465#0" expanded="true" />
+                <element signature="e#39391#39808#0" expanded="true" />
+                <element signature="e#39807#39808#0" expanded="true" />
+                <element signature="e#41388#41649#0" expanded="true" />
+                <element signature="e#41648#41649#0" expanded="true" />
+                <element signature="e#43058#44108#0" expanded="true" />
+                <element signature="e#44107#44108#0" expanded="true" />
+                <element signature="e#45995#46232#0" expanded="true" />
+                <element signature="e#46231#46232#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaypalActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
+      <file leaf-file-name="paypal_logo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/paypal_logo.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentActivity.java">
+      <file leaf-file-name="fragment_home.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="257">
+              <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/Config/Config.java">
+      <file leaf-file-name="PaypalExpressCheckout.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalExpressCheckout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="133" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="133" />
-              <folding />
+            <state relative-caret-position="-7">
+              <caret line="111" column="11" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="111" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3713#3987#0" expanded="true" />
+                <element signature="e#3986#3987#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lp</find>
+      <find>pending</find>
+      <find>auth</find>
+      <find>getDr</find>
+      <find>pay</find>
+      <find>payThe</find>
+      <find>ll_bottom</find>
+      <find>failure</find>
+      <find>intent</find>
+      <find>Intent</find>
+      <find>driverFoundID</find>
+      <find>lpbox</find>
+      <find>pbox</find>
+      <find>payment</find>
+      <find>getHas</find>
+      <find>gethas</find>
+      <find>paypal</find>
+      <find>polyline</find>
+      <find>aythe</find>
+      <find>ic_payment</find>
+      <find>ic_pa</find>
+      <find>nReq</find>
+      <find>witch2</find>
+      <find>switch</find>
+      <find>cash</find>
+      <find>cancel</find>
+      <find>switch1</find>
+      <find>paythe</find>
+      <find>switch2</find>
+      <find>tvPay</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -2091,12 +2195,27 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_paypal_express_checkout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalExpressCheckout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
@@ -2112,47 +2231,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="LakbayClient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="LakbayClient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="LakbayClient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="lakbayclient" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LakbayClient" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="lakbayclient" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Config" type="462c0819:PsiDirectoryNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DriverApp" />
+    <property name="device.picker.selection" value="Pixel_API_25_CLIENT_APP_" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.example.hp_pc.lakbayclient" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2190,7 +2297,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2325,48 +2432,80 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3e10a994-ad0e-46f0-8309-725ed64c2a4b" name="Default" comment="" />
-      <created>1530754523597</created>
+      <changelist id="6b9f2f4a-a445-442b-89cd-a17409a8eead" name="Default" comment="" />
+      <created>1531636393154</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1530754523597</updated>
+      <updated>1531636393154</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2376,18 +2515,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="612">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_paypal_express_checkout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="1020">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -2400,11 +2561,609 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/Config/Config.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5256">
+          <caret line="533" column="11" lean-forward="false" selection-start-line="533" selection-start-column="11" selection-end-line="533" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_paypal_express_checkout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalExpressCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="187" column="55" lean-forward="false" selection-start-line="187" selection-start-column="55" selection-end-line="187" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3713#3987#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5256">
+          <caret line="533" column="11" lean-forward="false" selection-start-line="533" selection-start-column="11" selection-end-line="533" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_paypal_express_checkout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalExpressCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="95" column="46" lean-forward="true" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3713#3987#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10656">
+          <caret line="964" column="57" lean-forward="false" selection-start-line="964" selection-start-column="57" selection-end-line="964" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="90" column="43" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="56" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10656">
+          <caret line="964" column="57" lean-forward="false" selection-start-line="964" selection-start-column="57" selection-end-line="964" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="90" column="43" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11568">
+          <caret line="964" column="57" lean-forward="false" selection-start-line="964" selection-start-column="57" selection-end-line="964" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="90" column="43" lean-forward="false" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalActivity.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.braintreepayments.api/braintree/2.14.1/14c46abd67b76596c93c65f15b937220dda8fc7c/braintree-2.14.1-sources.jar!/com/braintreepayments/api/models/PayPalRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_paypal_express_checkout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaymentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/widget/RelativeLayout.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="7" column="133" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="133" />
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/PaypalExpressCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="111" column="11" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="111" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3713#3987#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/paypal_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/hp_pc/lakbayclient/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="972" column="17" lean-forward="false" selection-start-line="972" selection-start-column="17" selection-end-line="972" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10825#12926#0" expanded="true" />
+            <element signature="e#12925#12926#0" expanded="true" />
+            <element signature="e#12964#14933#0" expanded="true" />
+            <element signature="e#14932#14933#0" expanded="true" />
+            <element signature="e#14972#16947#0" expanded="true" />
+            <element signature="e#16946#16947#0" expanded="true" />
+            <element signature="e#16988#19716#0" expanded="true" />
+            <element signature="e#19715#19716#0" expanded="true" />
+            <element signature="e#19755#20264#0" expanded="true" />
+            <element signature="e#19896#20155#0" expanded="true" />
+            <element signature="e#20154#20155#0" expanded="true" />
+            <element signature="e#20263#20264#0" expanded="true" />
+            <element signature="e#20300#21807#0" expanded="true" />
+            <element signature="e#20641#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#21806#21807#0" expanded="true" />
+            <element signature="e#21851#23505#0" expanded="true" />
+            <element signature="e#22191#23413#0" expanded="true" />
+            <element signature="e#23412#23413#0" expanded="true" />
+            <element signature="e#23504#23505#0" expanded="true" />
+            <element signature="e#23542#23752#0" expanded="true" />
+            <element signature="e#23751#23752#0" expanded="true" />
+            <element signature="e#30582#31460#0" expanded="true" />
+            <element signature="e#31459#31460#0" expanded="true" />
+            <element signature="e#36257#36465#0" expanded="true" />
+            <element signature="e#36464#36465#0" expanded="true" />
+            <element signature="e#39391#39808#0" expanded="true" />
+            <element signature="e#39807#39808#0" expanded="true" />
+            <element signature="e#41388#41649#0" expanded="true" />
+            <element signature="e#41648#41649#0" expanded="true" />
+            <element signature="e#43058#44108#0" expanded="true" />
+            <element signature="e#44107#44108#0" expanded="true" />
+            <element signature="e#45995#46232#0" expanded="true" />
+            <element signature="e#46231#46232#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
