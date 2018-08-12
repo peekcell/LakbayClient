@@ -976,11 +976,13 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             tvpboxifcash.setVisibility(View.VISIBLE);
             tvpboxifcash.setText("Cash payment. Waiting for driver confirmation.");
             tvpboxPtype.setText(pmethod);
+            setPayPending();
         } else if(pmethod.equalsIgnoreCase("Paypal")) {
             btnpboxPaynow.setVisibility(View.VISIBLE);
             tvpboxifcash.setVisibility(View.VISIBLE);
             tvpboxifcash.setText("Paypal payment. Proceed to paypal UI.");
             tvpboxPtype.setText(pmethod);
+            setPayPending();
         }
         getToken();
         DatabaseReference getPendingData = FirebaseDatabase.getInstance().getReference().child("pending").child(pboxdriverID).child("price_to_pay");
@@ -1011,6 +1013,71 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
             }
         });
 
+    }
+    DatabaseReference getCurrentRide;
+    ValueEventListener getCurrentRideListener;
+    String ID1;
+    private String setRideID;
+    private void setPayPending() {
+        final String[] thisisRideID = new String[1];
+        getCurrentRide = FirebaseDatabase.getInstance().getReference().child("clients").child(userUID);
+//        getCurrentRideListener = getCurrentRide.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                String keyID = dataSnapshot.child("current_ride_id").getValue(String.class);
+//
+//                ID1 = keyID;
+//                setRideID = dataSnapshot.child("current_ride_id").getValue(String.class);
+//
+////                Toast.makeText(getContext(), "setRideID: " + setRideID, Toast.LENGTH_SHORT).show();
+//
+////                Toast.makeText(getContext(), "keyID: " + keyID, Toast.LENGTH_SHORT).show();
+//
+////                DatabaseReference setPending = FirebaseDatabase.getInstance().getReference().child("clients").child(userUID).child("pay_in_pending").child(keyID);
+////
+////                HashMap map = new HashMap();
+////                map.put("payment_method", pmethod);
+////                map.put("payment_status", "unpaid");
+////
+////                setPending.updateChildren(map);
+//
+//                turnToPaid(false);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//        ValueEventListener setRideListener = new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                setRidenga[0] = (String) dataSnapshot.child("current_ride_id").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        };
+//        getCurrentRide.addValueEventListener(setRideListener);
+
+        getCurrentRide.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String keyID = dataSnapshot.child("current_ride_id").getValue(String.class);
+
+                ID1 = keyID;
+                setRideID = dataSnapshot.child("current_ride_id").getValue(String.class);
+
+                turnToPaid(false);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void getToken() {
@@ -1089,6 +1156,9 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
 
                     tvpboxifcash.setText("Success. ID: " + str);
 
+                    if(str.contains("Success")) {
+                        turnToPaid(true);
+                    }
                     DatabaseReference updatePayment = FirebaseDatabase.getInstance().getReference().child("payments").child(userUID);
 
                     String requestID = updatePayment.push().getKey();
@@ -1100,6 +1170,14 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                     map.put("push_date", ServerValue.TIMESTAMP);
 
                     updatePayment.child(requestID).updateChildren(map);
+
+//                    turnToPaid();
+
+                    DatabaseReference updatePerClient = FirebaseDatabase.getInstance().getReference().child("clients").child(userUID).child("pay_in_pending").child(setRideID);
+                    HashMap map2 = new HashMap();
+                    map2.put("payment_status", "paid");
+
+                    updatePerClient.updateChildren(map2);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -1119,6 +1197,26 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback,GoogleA
                 paymentBoxLayout.setVisibility(View.GONE);
             }
         });
+    }
+
+    private void turnToPaid(Boolean x) {
+        if(x) {
+            DatabaseReference updatePerClient = FirebaseDatabase.getInstance().getReference().child("clients").child(userUID).child("pay_in_pending").child(setRideID);
+            HashMap map2 = new HashMap();
+            map2.put("payment_status", "paid");
+
+            updatePerClient.updateChildren(map2);
+        } else {
+            DatabaseReference setPending = FirebaseDatabase.getInstance().getReference().child("clients").child(userUID).child("pay_in_pending").child(setRideID);
+//
+            HashMap map = new HashMap();
+            map.put("payment_method", pmethod);
+            map.put("payment_status", "unpaid");
+
+            setPending.updateChildren(map);
+
+            Toast.makeText(getContext(), "Pay First", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void endRide(){

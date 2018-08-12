@@ -55,9 +55,6 @@ public class MainActivity extends AppCompatActivity {
         nAuth = FirebaseAuth.getInstance();
         isAuth = FirebaseDatabase.getInstance().getReference().child("clients");
 
-
-
-
         firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -174,78 +171,8 @@ public class MainActivity extends AppCompatActivity {
 //                                }
 //                            });
 
-                            ValueEventListener isValidUser = new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    isUserTrue[0] = dataSnapshot.child(user.getUid()).exists();
-
-                                    Toast.makeText(MainActivity.this, "" + isUserTrue[0], Toast.LENGTH_SHORT).show();
-
-                                    if(isUserTrue[0]) {
-                                        try{
-                                            if(user.isEmailVerified()){
-                                                progressDialog.setMessage("Signing In Your Account");
-                                                progressDialog.show();
-                                                Handler handler = new Handler();
-                                                handler.postDelayed(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        progressDialog.dismiss();
-                                                        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-                                                        startActivity(intent);
-                                                        finish();
-                                                    }
-                                                }, 3000);
-
-                                            }else{
-//                                        Toast.makeText(MainActivity.this, "Email is not verified \n check your email inbox.", Toast.LENGTH_SHORT).show();
-//                                        progressDialog.setMessage("Please Verify Your Email");
-                                                progressDialog.setMessage("Please Verify Your Email");
-                                                progressDialog.show();
-                                                Handler handler = new Handler();
-                                                handler.postDelayed(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        progressDialog.dismiss();
-                                                        nAuth.signOut();
-                                                    }
-                                                }, 3000);
-
-                                            }
-                                        }catch (NullPointerException e){
-                                            Toast.makeText(MainActivity.this, "NullPointerException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    } else {
-                                        progressDialog.setMessage("Sign In Error!");
-                                        progressDialog.show();
-                                        Handler handler = new Handler();
-                                        handler.postDelayed(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                progressDialog.dismiss();
-                                            }
-                                        }, 3000);
-
-//                                Toast.makeText(MainActivity.this, "signInFailed: " + isUserTrue[0],
-//                                        Toast.LENGTH_SHORT).show();
-
-                                        nAuth.signOut();
-                                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-
-                                }
-                            };
-
-                            isAuth.addListenerForSingleValueEvent(isValidUser);
-
                             if (!task.isSuccessful()) {
-                                progressDialog.setMessage("Sign In Error!");
+                                progressDialog.setMessage("Error! Email does not exist!");
                                 progressDialog.show();
                                 Handler handler = new Handler();
                                 handler.postDelayed(new Runnable() {
@@ -258,6 +185,80 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this, "task not successful",
                                         Toast.LENGTH_SHORT).show();
 
+                                isUserTrue[0] = false;
+
+
+                            } else {
+
+                                ValueEventListener isValidUser = new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        isUserTrue[0] = dataSnapshot.child(user.getUid()).exists();
+
+                                        Toast.makeText(MainActivity.this, "" + isUserTrue[0], Toast.LENGTH_SHORT).show();
+
+                                        if (isUserTrue[0]) {
+                                            try {
+                                                if (user.isEmailVerified()) {
+                                                    progressDialog.setMessage("Signing In Your Account");
+                                                    progressDialog.show();
+                                                    Handler handler = new Handler();
+                                                    handler.postDelayed(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                            progressDialog.dismiss();
+                                                            Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                                                            startActivity(intent);
+                                                            finish();
+                                                        }
+                                                    }, 3000);
+
+                                                } else {
+//                                        Toast.makeText(MainActivity.this, "Email is not verified \n check your email inbox.", Toast.LENGTH_SHORT).show();
+//                                        progressDialog.setMessage("Please Verify Your Email");
+                                                    progressDialog.setMessage("Please Verify Your Email");
+                                                    progressDialog.show();
+                                                    Handler handler = new Handler();
+                                                    handler.postDelayed(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                            progressDialog.dismiss();
+                                                            nAuth.signOut();
+                                                        }
+                                                    }, 3000);
+
+                                                }
+                                            } catch (NullPointerException e) {
+                                                Toast.makeText(MainActivity.this, "NullPointerException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                            }
+                                        } else {
+                                            progressDialog.setMessage("Sign In Error!");
+                                            progressDialog.show();
+                                            Handler handler = new Handler();
+                                            handler.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    progressDialog.dismiss();
+                                                }
+                                            }, 3000);
+
+//                                Toast.makeText(MainActivity.this, "signInFailed: " + isUserTrue[0],
+//                                        Toast.LENGTH_SHORT).show();
+
+                                            nAuth.signOut();
+                                            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+                                };
+
+                                isAuth.addListenerForSingleValueEvent(isValidUser);
                             }
 //                            else{
 //
